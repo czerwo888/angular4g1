@@ -13,10 +13,11 @@ import {NgForOf, NgIf} from '@angular/common';
   styleUrl: './todo-list.component.css'
 })
 export class TodoListComponent {
+  ErrorMessage = '';
   todos : Todo[] = [];
   addTodo(todo : string) : void {
     if (todo.length <= 3){
-      alert('Zadanie musi mieć więcej niż 3 znaki');
+      this.ErrorMessage = 'Zadanie musi mieć więcej niż 3 znaki';
       return;
     }
 
@@ -29,5 +30,9 @@ export class TodoListComponent {
   // }
   changeTodoStatus(todo: Todo) {
     todo.isCompleted = !todo.isCompleted;
+  }
+
+  clearErrorMessage() {
+    this.ErrorMessage = '';
   }
 }
