@@ -23,4 +23,11 @@ export class TodoListComponent {
     this.todos.push({name: todo, isCompleted: false});
     console.log('Aktualna lista todo: ', this.todos);
   }
+
+  // changeTodoStatus(i: number) {
+  //   this.todos[i].isCompleted = !this.todos[i].isCompleted;
+  // }
+  changeTodoStatus(todo: Todo) {
+    todo.isCompleted = !todo.isCompleted;
+  }
 }
