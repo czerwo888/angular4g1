@@ -4,3 +4,6 @@
 .todo-item{
   margin-left: 10px;
 }
+.todo-ngClass{
+  text-decoration: line-through;
+}
