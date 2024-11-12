@@ -4,13 +4,7 @@
 <input type="text" #name name="todo" class="form-control"> <!--#name zmienna template - nie jest najlepszym rozwiazaniem, powinno sie uzywac formularzy-->
 <button type="button" class="btn btn-primary mt-3" (click)="addTodo(name.value)">Dodaj zadanie</button>
 
-<div class="alert alert-warning alert-dismissible fade show mt-2" role="alert" *ngIf="ErrorMessage">
-  <!-- po kliknieciu na krzyzyk alert zniknie ale nie zmieni sie stan zmiennej ErrorMessage, mozna dodac cos takiego (click)="ErrorMessage = ''",
-  ale tak nie zrobimy, poniewaz nie powinno sie wstawiac logiki do szablonu html -->
-  {{ ErrorMessage}}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clearErrorMessage()"></button>
-  <!-- data-bs-dismiss="alert" - zamkniecie alertu po kliknieciu na krzyzyk, dzieki niemu bootstrap wie ktory skrypt uruchomic -->
-</div>
+<app-alert *ngIf="ErrorMessage" [ErrorMessage]="ErrorMessage" (close)="clearErrorMessage()"/>
 
 <div class="mt-4">
   <h4>Lista zadań:</h4>

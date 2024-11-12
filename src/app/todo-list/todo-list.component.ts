@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Todo} from '../shared/interfaces/todo.interface';
 import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
+import {AlertComponent} from '../shared/components/alert/alert.component';
 
 @Component({
   selector: 'app-todo-list',
@@ -9,7 +10,8 @@ import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
     NgForOf,
     NgIf,
     NgStyle,
-    NgClass
+    NgClass,
+    AlertComponent
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css'
