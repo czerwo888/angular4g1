@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "2",
+      "name": "Learn angular",
+      "isCompleted": false
+    },
+    {
+      "id": "3",
+      "name": "or no",
+      "isCompleted": false
+    },
+    {
+      "id": "d2d0",
+      "name": "jurek",
+      "isCompleted": false
+    }
+  ]
+}

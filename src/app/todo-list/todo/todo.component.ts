@@ -18,11 +18,13 @@ export class TodoComponent {
   @Input() todo!: Todo;
   @Input() i!: number;
   @Output() delete = new EventEmitter<void>();
+  @Output() update = new EventEmitter<void>();
 
   openModal = false;
 
   changeTodoStatus(todo: Todo) {
     todo.isCompleted = !todo.isCompleted;
+    this.update.emit();
   }
 
   toggleModal(){
